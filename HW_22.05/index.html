@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>22.05.2024</title>
+</head>
+
+<body>
+   <div id="container"></div>
+
+   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+   <script type="text/babel">
+
+
+
+      const informMusic = {
+         country: 'Україна',
+         yearFoundation: '2024',
+         genre: 'Поп, електропоп',
+         members: [
+            { name: 'Jerry Heil' },
+            { name: 'alyona alyona' }
+         ]
+      };
+
+      const informBook = {
+         favoriteBook: "Пісня льоду та вогню",
+         genre: "Епічне фентезі",
+         numberPages: "Залежно від видання, загалом близько 4500 сторінок",
+         author: "Джордж Р. Р. Мартін"
+      };
+
+      const salad = {
+         step1: '1 огірок, нарізаний кубиками',
+         step2: '1 помідор, нарізаний кубиками',
+         step3: '1/2 солодкого перцю, нарізаного кубиками',
+         step4: '1/4 склянки оливок каламата, розрізаних навпіл',
+         step5: '1/4 склянки сиру фета, подрібненого',
+         step6: '2 столові ложки оливкової олії',
+         step7: '1 столова ложка лимонного соку',
+         step8: 'Спеції для салату',
+         step9: '1 пучок зеленого салату (наприклад, салат ромен, латук)'
+      };
+
+      ReactDOM.createRoot(document.getElementById("container")).render(
+         <div>
+            <ul>Book
+               <li>Назва книги: {informBook.favoriteBook}</li>
+               <li>Жанр: {informBook.genre}</li>
+               <li>Кількість сторінок: {informBook.numberPages}</li>
+               <li>Автор: {informBook.author}</li>
+            </ul>
+            <ul>Music:
+               <li>Країна: {informMusic.country}</li>
+               <li>Рік випуску: {informMusic.yearFoundation}</li>
+               <li>Жанр: {informMusic.genre}</li>
+               <li>Учасники:
+                  <ul>
+                     <li>{informMusic.members[0].name}</li>
+                     <li>{informMusic.members[1].name}</li>
+                  </ul>
+               </li>
+            </ul>
+            <ul>Salad:
+               <li>{salad.step1}</li>
+               <li>{salad.step2}</li>
+               <li>{salad.step3}</li>
+               <li>{salad.step4}</li>
+               <li>{salad.step5}</li>
+               <li>{salad.step6}</li>
+               <li>{salad.step7}</li>
+               <li>{salad.step8}</li>
+               <li>{salad.step9}</li>
+            </ul>
+         </div>
+      );
+   </script>
+</body>
+
+</html>
